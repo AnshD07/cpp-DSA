@@ -24,6 +24,8 @@ public:
           {
                delete next; // when we delete memory in heap then destucter again call okay
                this->next = NULL;
+
+               cout << "in if " << endl;
           }
 
           cout << "          Memory is free for the node with data : " << value << endl;

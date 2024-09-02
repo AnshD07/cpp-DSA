@@ -143,21 +143,21 @@ void deleteNode(int position, Node *&head,Node *&tail)
     {
         // deleting any middle node or last node
         Node *curr = head;
-        Node *prev = NULL;
+        Node *temp = NULL;
 
         int cnt = 1;
         while (cnt < position)
         {
-            prev = curr;
+            temp = curr;
             curr = curr->next;
             cnt++;
         }
         if (curr->next == NULL)
         {
-            tail = prev;
+            tail = temp;
         }
         curr->prev = NULL;
-        prev->next = curr->next;
+        temp->next = curr->next;
         curr->next = NULL;
 
         delete curr;

@@ -42,9 +42,11 @@ void quickSort(int *arr,int s,int e){
     int p = partition(arr,s,e);
 
 
-    int mid = s+(e-s)/2;
+    int mid = s+(e-s)/2; 
     quickSort(arr,s,p-1);
     quickSort(arr,p+1,e);
+
+    // this is quick sort algorithm what was your motive for doing this 
 }
 
 
@@ -58,9 +60,6 @@ int main(){
         cout << arr[i] << " ";
     }
 }
-
-
-
 
 
 /*   coding ninjas code*/
@@ -99,13 +98,11 @@ int partition( vector<int> &arr, int s, int e) {
         }
 
     }
-
     return pivotIndex;
 
 }
 
 void solve(vector<int> &arr, int s, int e) {
-
     //base case
     if(s >= e) 
         return ;
